@@ -1,0 +1,256 @@
+.dilivery{
+    padding: var(--section-padding);
+    position: relative;
+    .slick-prev {
+        position: absolute;
+        top: 55%;
+        left: 10%;
+    }
+    .slick-next {
+        position: absolute;
+        top: 55%;
+        right: 10%;
+    }
+    .slick-dots{
+        position: absolute;
+        display: none;
+        font-size: 0;
+        bottom: 20px;
+        left: calc(50% - 67px);
+        ul{
+            display: flex;
+        }
+        li{
+            width: auto;
+            height: auto;
+            margin: 0 13px;
+            button {
+                width: 8px;
+                height: 8px;
+                background: transparent;
+                border-radius: 50%;
+                border: 2px solid #ffffff;
+                padding: 0;
+            }
+        }
+        li.slick-active button{
+            background-color: #fff;
+        }
+        li button::before{
+            display: none;
+        }
+    }    
+}
+
+.services{
+    padding: var(--section-padding);
+    position: relative;
+    .slick-prev {
+        position: absolute;
+        top: 55%;
+        left: 10%;
+    }
+    .slick-next {
+        position: absolute;
+        top: 55%;
+        right: 10%;
+    }
+    .slick-dots{
+        position: absolute;
+        display: none;
+        font-size: 0;
+        bottom: 20px;
+        left: calc(50% - 67px);
+        ul{
+            display: flex;
+        }
+        li{
+            width: auto;
+            height: auto;
+            margin: 0 13px;
+            button {
+                width: 8px;
+                height: 8px;
+                background: transparent;
+                border-radius: 50%;
+                border: 2px solid #ffffff;
+                padding: 0;
+            }
+        }
+        li.slick-active button{
+            background-color: #fff;
+        }
+        li button::before{
+            display: none;
+        }
+    }    
+}
+
+
+.about-company{
+    padding: var(--section-padding);
+    .container{
+        display: flex;
+        justify-content: center;
+        .description{
+            max-width: 560px;
+            margin-right: 35px;
+            .template-title{
+                text-align: left;
+                &::before{
+                    left: 45px;
+                    background: #89C249;
+                }
+            }
+            p{
+                font-size: 18px;
+                line-height: 170%;
+                color: #FFFFFF;
+            }
+        }
+        .description-img{
+            position: relative;
+            width: 550px;
+            height: 550px;
+            transition: all 1s ease-in-out;
+            .a-circle{
+                position: absolute;
+                width: 550px;
+                height: 550px;
+                background: #363A4D;
+                border-radius: 900px;
+            }
+            .china-document{
+                position: absolute;
+                width: 488px;
+                height: 581px;
+            }
+            .pen{
+                position: absolute;
+                width: 238px;
+                height: 381px;
+                left: 40px;
+                top: 80px;
+            }
+        }
+    }   
+}
+
+//dilivery
+
+@media (max-width: 991.98px){
+
+    .dilivery .template-title {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 799.98px){
+
+    .dilivery {
+        .slick-dots{
+            display: block;
+        }
+    }
+
+}
+
+//services
+
+@media (max-width: 991.98px){
+
+    .services .template-title {
+        font-size: 24px;
+    }
+    .services .container{
+        padding: 30px 0 50px;
+    }
+
+}
+
+@media (max-width: 799.98px){
+
+    .services {
+        .slick-dots{
+            display: block;
+        }
+    }
+
+}
+
+// about-company
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+// @media (max-width: 1399.98px) {}
+
+@media (max-width: 1299.98px) {
+    .about-company{
+        .container{
+            margin-top: 50px !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: unset;
+
+            padding: 0 30px;
+            .description{
+                margin-right: 0;
+                .template-title{
+                    text-align: center;
+                    &::before{
+                        left: 50%;
+                    }
+                }
+                p{
+                    text-align: justify;
+                }
+            }
+            .description-img{
+                margin-top: -50px;
+                transform: scale(0.7);
+            }
+        }   
+    }
+}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+// @media (max-width: 1199.98px) {}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .about-company .template-title {
+        font-size: 24px;
+    }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+// @media (max-width: 767.98px) {}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    .about-company{
+        .container{
+            .description{
+                p{
+                    font-size: 15px;
+                }
+            }
+        }   
+    }
+}
+
+@media (max-width: 399.98px) {
+    .about-company{
+        .container{
+            .description{
+                p{
+                    font-size: 12px;
+                }
+            }
+            .description-img{
+                margin-top: -60px;
+                transform: scale(0.5);
+            }
+        }   
+    }
+}

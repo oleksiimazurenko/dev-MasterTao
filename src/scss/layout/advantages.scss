@@ -1,0 +1,141 @@
+.advantages{
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    &__row{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: -48px;
+        justify-content: center;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        width: 263px;
+        margin: 0 15px 48px;
+        padding: 0 10px;
+
+        font-size: 18px;
+        line-height: 124.5%;
+        text-align: center;
+        color: #FFFFFF;
+        --animate-duration: 300ms;
+        .img-box{
+            width: 113px;
+            height: 113px; 
+            border: 1px solid #6C7188;
+            border-radius: 100%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 22px;
+            img{
+                z-index: 1;
+                width: 40px;
+                height: 40px;
+                position: relative;
+                
+            }
+            &:before{
+                content: "";
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                background: #89C249;
+                position: absolute;
+                border-radius: 100%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            
+            }
+        }
+        .text-box{
+            color: #ffff;
+        }
+        
+    }
+    .slick-prev{
+        position: absolute;
+        top: 50%;
+        left: 10px;
+    }
+    .slick-next{
+        position: absolute;
+        top: 50%;
+        right: 10px;
+    }
+
+    .slick-dots{
+        position: absolute;
+        display: none;
+        font-size: 0;
+        bottom: 20px;
+        left: calc(50% - 67px);
+        ul{
+            display: flex;
+        }
+        li{
+            width: auto;
+            height: auto;
+            margin: 0 13px;
+            button {
+                width: 8px;
+                height: 8px;
+                background: transparent;
+                border-radius: 50%;
+                border: 2px solid #ffffff;
+                padding: 0;
+            }
+        }
+        li.slick-active button{
+            background-color: #fff;
+        }
+        li button::before{
+            display: none;
+        }
+    }    
+
+}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+// @media (max-width: 1399.98px) {}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .advantages{
+        .template-title{
+            font-size: 24px;
+        }
+    }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    .advantages__item {
+        margin: 0 13px 48px;
+    }
+}
+
+@media (max-width: 585.98px) {
+    .advantages{
+        .container{
+            height: 465px;
+        }
+        .slick-dots{
+            display: block;
+        }
+    }
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+// @media (max-width: 575.98px) {}
+
+// other 
+// @media (max-width: 435.98px) {}

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Master Tao">
+    <meta name="description" content="Direct Cargo and China">
+    <title>MasterTao</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="logo"></a>
+
+            <button class="navbar-toggler" type="button">
+                <img src="images/icons/icon-hamburger-menu.svg" alt="icon-hamburger-menu">
+            </button>
+
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dilivery">Prices and Delivery Times</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-company">About the Company</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">Contacts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cooperation">Submit a Shipment</a>
+                    </li>
+                </ul>
+
+                <div class="box-header-button"><a href="#calculation" class="btn btn-primary animate__animated animate__bounce">Submit Request</a></div>
+
+            </div>
+            
+
+        </nav>  
+    </header>
+    
+    <main>
+        
+        <!-- first-screen -->
+
+        <section class="first-screen container-fluid" id="first-screen">
+            <div class="first-screen__slide-list">
+                <div class="first-screen__slide animate__animated active" style="background-image: url(images/first-screen/first-screen-1.png);">
+                    <div class="container">
+                        <h1 class="slide-title">Direct Cargo and China</h1>
+                        <div class="slide-subtitle">We will deliver any goods from China at a fair price</div>
+                        <a href="#calculation" class="btn btn-primary">calculate the price<i class="icon icon-arrow-left"></i></a>
+                    </div>
+                </div>
+                
+                <div class="first-screen__slide animate__animated" style="background-image: url(images/first-screen/first-screen-2.png);">
+                    <div class="container">
+                        <h2 class="slide-title">We guarantee deadlines!</h2>
+                        <div class="slide-subtitle">
+                            If we don't meet the deadline, delivery of cargo with a discount of up to 90%</div>
+                        <a href="#calculation" class="btn btn-primary">calculate the price<i class="icon icon-arrow-left"></i></a>
+                    </div>
+                </div>
+    
+    
+                <div class="first-screen__slide animate__animated" style="background-image: url(images/first-screen/first-screen-3.png);">
+                    <div class="container">
+                        <h2 class="slide-title">Redemption of goods from TaoBao, 1688</h2>
+                        <div class="slide-subtitle">Redemption and delivery of goods from Chinese marketplaces.</div>
+                        <a href="#calculation" class="btn btn-primary">calculate the price<i class="icon icon-arrow-left"></i></a>
+                    </div>
+                </div>
+    
+    
+                <div class="first-screen__slide animate__animated" style="background-image: url(images/first-screen/first-screen-4.png);">
+                    <div class="container">
+                        <h2 class="slide-title">Express auto delivery</h2>
+                        <div class="slide-subtitle">Delivery by road from China to Russia from 15 days, from $0.5/kg</div>
+                        <a href="#calculation" class="btn btn-primary">calculate the price<i class="icon icon-arrow-left"></i></a>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="slick-arrow slick-prev"><img src="images/icons/prev-arrow.svg" alt="prev-arrow"></div>
+            <div class="slick-arrow slick-next"><img src="images/icons/next-arrow.svg" alt="next-arrow"></div>
+            <div class="slick-dots">
+                <ul>
+                    <li class="slick-active"><button></button></li>
+                    <li class=""><button></button></li>
+                    <li class=""><button></button></li>
+                    <li class=""><button></button></li>
+                </ul>
+            </div>
+
+        </section>
+        
+        <!-- calculation -->
+
+        <section class="calculation container-fluid" id="calculation">
+            <div class="calculation__container">
+                <div class="calculation__form">
+                    <h2 class="calculation__title">Get a Quote for Your Shipment</h2>
+                    <form class="form-calculation">
+
+                        <div class="calculation__input-wrapper">
+                            <label for="product-category">Product Category:</label>
+                            <input type="text" id="product-category" name="product-category" placeholder="Product Category:">
+                        </div>
+
+                        <div class="calculation__input-wrapper">
+                            <label for="price-cargo">Cargo Price:</label>
+                            <input type="text" id="price-cargo" name="price-cargo" placeholder="Enter price:">
+                        </div>
+
+                        <div class="calculation__input-wrapper">
+                            <label for="weight">Cargo Weight (kg):</label>
+                            <input type="text" id="weight" name="weight" placeholder="Enter weight:">
+                        </div>
+
+                        <div class="calculation__input-wrapper">
+                            <label for="volume-cargo">Cargo Volume (m3):</label>
+                            <input type="text" id="volume-cargo" name="volume-cargo" placeholder="Enter volume:">
+                        </div>
+
+                        <div class="calculation__input-wrapper">
+                            <div class="checkbox-container">
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="insurance">
+                                    <label for="insurance">Insurance</label>
+                                </div>
+                                <div class="checkbox-row">
+                                    <input type="checkbox" id="customs-clearance">
+                                    <label for="customs-clearance">Customs Clearance</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="calculation__input-wrapper">
+                            <label for="hs-code">HS Code:</label>
+                            <input type="text" id="hs-code" name="hs-code" placeholder="Enter code:">
+                        </div>
+
+                        <div class="file-container">
+                            <div id="file-name">Your File Name</div>
+                            <div class="file-row">
+                                <input class="input-file" id="fileInput" name="fileInput" type="file">
+                                <div class="file-row__text">
+                                    Upload Product Photo
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary">Next Step<i class="icon icon-arrow-left"></i></button>
+                    </form>
+                </div>
+
+                <div class="container-photo" style="background-image: url(images/medium-shot-man-holding-clipboard.png);"></div>
+            </div>
+        </section>
+
+        <!-- advantages -->
+        
+        <section class="advantages container-fluid section-background" id="advantages">
+                <div class="container">
+                    <h2 class="template-title">Why Choose Us</h2>
+                    <div class="advantages__row">
+                        <div class="advantages__item animate__animated">
+                            <div class="img-box">
+                                <img src="images/icons/icon-advantages-1.svg" alt="icon">
+                            </div>
+                            <div class="text-box">Customs Clearance</div>
+                        </div>
+                        <div class="advantages__item animate__animated">
+                            <div class="img-box">
+                                <img src="images/icons/icon-advantages-2.svg" alt="icon">
+                            </div>
+                            <div class="text-box">Cargo Insurance</div>
+                        </div>
+                        <div class="advantages__item animate__animated">
+                            <div class="img-box">
+                                <img src="images/icons/icon-advantages-3.svg" alt="icon">
+                            </div>
+                            <div class="text-box">Product Quality Check</div>
+                        </div>
+                        <div class="advantages__item animate__animated">
+                            <div class="img-box">
+                                <img src="images/icons/icon-advantages-4.svg" alt="icon">
+                            </div>
+                            <div class="text-box">Delivery to Any City</div>
+                        </div>
+                        <div class="advantages__item animate__animated">
+                            <div class="img-box">
+                                <img src="images/icons/icon-advantages-5.svg" alt="icon">
+                            </div>
+                            <div class="text-box">Consolidation at Warehouse</div>
+                        </div>
+                        <div class="advantages__item animate__animated">
+                            <div class="img-box">
+                                <img src="images/icons/icon-advantages-6.svg" alt="icon">
+                            </div>
+                            <div class="text-box">Responsible Cargo Storage</div>
+                        </div>
+                        <div class="advantages__item animate__animated">
+                            <div class="img-box">
+                                <img src="images/icons/icon-advantages-7.svg" alt="icon">
+                            </div>
+                            <div class="text-box">Assistance in Payment</div>
+                        </div>
+                        <div class="advantages__item animate__animated">
+                            <div class="img-box">
+                                <img src="images/icons/icon-advantages-8.svg" alt="icon">
+                            </div>
+                            <div class="text-box">Packaging, Repackaging, Palletizing for International Shipping</div>
+                        </div>
+                    </div>
+                    <div class="slick-dots">
+                        <ul></ul>
+                    </div>
+                </div>
+        </section>
+
+
+        <!-- dilivery -->
+        <section class="dilivery container-fluid" id="dilivery">
+            <div class="container">
+                <h2 class="template-title">Delivery Options from China</h2>
+                <div class="slider-template">
+                    <div class="slider-template__item animate__animated">
+                        <div class="special-box">
+                            <div class="img-box">
+                                <img src="images/dilivery/slider-dilivery-1.png" alt="slider-1">
+                            </div>
+                            <div class="options">Auto-Regular</div>
+                            <ul class="attr">
+                                <li class="attr-day">9-15 days</li>
+                                <li class="attr-weight">from 5 kg</li>
+                            </ul>
+                            <div class="price">
+                                <span>from</span>2.5<span>$/kg</span>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn btn-primary">Submit Request</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-template__item animate__animated">
+                        <div class="special-box">
+                            <div class="img-box">
+                                <img src="images/services/slider-services-2.png" alt="slider-2">
+                            </div>
+                            <div class="options">Auto-Express</div>
+                            <ul class="attr">
+                                <li class="attr-day">9-13 days</li>
+                                <li class="attr-weight">from 5 kg</li>
+                            </ul>
+                            <div class="price">
+                                <span>from</span>3.5<span>$/kg</span>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn btn-primary">Submit Request</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-template__item animate__animated">
+                        <div class="special-box">
+                            <div class="img-box">
+                                <img src="images/dilivery/slider-dilivery-3.png" alt="slider-3">
+                            </div>
+                            <div class="options">Air</div>
+                            <ul class="attr">
+                                <li class="attr-day" >7-11 days</li>
+                                <li class="attr-weight">from 5 kg</li>
+                            </ul>
+                            <div class="price">
+                                <span>from</span>4<span>$/kg</span>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn btn-primary">Submit Request</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-template__item animate__animated">
+                        <div class="special-box">
+                            <div class="img-box">
+                                <img src="images/dilivery/slider-dilivery-4.png" alt="slider-4">
+                            </div>
+                            <div class="options">Auto-Regular</div>
+                            <ul class="attr">
+                                <li class="attr-day">9-15 days</li>
+                                <li class="attr-weight">from 5 kg</li>
+                            </ul>
+                            <div class="price">
+                                <span>from</span>2.5<span>$/kg</span>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn btn-primary">Submit Request</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-template__item animate__animated">
+                        <div class="special-box">
+                            <div class="img-box">
+                                <img src="images/dilivery/slider-dilivery-4.png" alt="slider-5">
+                            </div>
+                            <div class="options">Auto-Regular</div>
+                            <ul class="attr">
+                                <li class="attr-day">9-15 days</li>
+                                <li class="attr-weight">from 5 kg</li>
+                            </ul>
+                            <div class="price">
+                                <span>from</span>2.5<span>$/kg</span>
+                            </div>
+                            <div class="button-group">
+                                <button class="btn btn-primary">Submit Request</button>
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slick-arrow slick-prev"><img src="images/icons/prev-arrow.svg" alt="prev-arrow"></div>
+            <div class="slick-arrow slick-next"><img src="images/icons/next-arrow.svg" alt="next-arrow"></div>
+            <div class="slick-dots">
+                <ul></ul>
+            </div>
+        </section>
+
+        <!-- services -->
+        <section class="services container-fluid section-background" id="services">
+            <div class="container">
+                <h2 class="template-title">Services</h2>
+                <div class="slider-template">
+                    <div class="slider-template__item animate__animated">
+                        <div class="special-box" style="background-image: url(images/services/slider-services-1.png);">
+                            <div class="title">Product Purchase</div>
+                            <div class="description">The company provides a full range of logistics services for the delivery of goods from China to Russia - consolidated cargo and full-container loads, Taobao agent services, CARGO China-Russia.</div>
+                            <div class="button-group">
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-template__item animate__animated">
+                        <div class="special-box" style="background-image: url(images/services/slider-services-2.png);">
+                            <div class="title">Cargo Insurance</div>
+                            <div class="description">The company provides a full range of logistics services for the delivery of goods from China to Russia - consolidated cargo and full-container loads, Taobao agent services, CARGO China-Russia.</div>
+                            <div class="button-group">
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-template__item animate__animated">
+                        <div class="special-box" style="background-image: url(images/services/slider-services-3.png);">
+                            <div class="title">Warehouse Rental</div>
+                            <div class="description">The company provides a full range of logistics services for the delivery of goods from China to Russia - consolidated cargo and full-container loads, Taobao agent services, CARGO China-Russia.</div>
+                            <div class="button-group">
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-template__item animate__animated">
+                        <div class="special-box" style="background-image: url(images/services/slider-services-4.png);">
+                            <div class="title">Money Transfer</div>
+                            <div class="description">The company provides a full range of logistics services for the delivery of goods from China to Russia - consolidated cargo and full-container loads, Taobao agent services, CARGO China-Russia.</div>
+                            <div class="button-group">
+                                <button class="btn btn-secondary">Learn More</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slick-arrow slick-prev"><img src="images/icons/prev-arrow.svg" alt="prev-arrow"></div>
+            <div class="slick-arrow slick-next"><img src="images/icons/next-arrow.svg" alt="next-arrow"></div>
+            <div class="slick-dots">
+                <ul></ul>
+            </div>
+        </section>
+
+
+        <!-- about-company -->
+        <section class="about-company container-fluid" id="about-company">
+            <div class="container">
+                <div class="description">
+                    <h2 class="template-title">About the Company</h2>
+                    <p>Asia Cargo is a full-service logistics company specializing in the delivery of goods from China to Ukraine - consolidated cargo and full-container loads, Taobao agent services, CARGO China-Russia. For your convenience, we offer rates for light and heavy cargo. We have been operating in the market for over 4 years, and our company's executives have been involved in logistics for over 11 years.</p>
+                    <p>We strive to provide the best delivery conditions and service to our customers. By choosing us, you are choosing quality delivery that is cost-effective and timely! See it for yourself!</p>
+                </div>                
+                <div class="description-img">
+                    <div class="a-circle"></div>
+                    <div class="china-document">
+                        <img src="images/icons/china-document.svg" alt="china">
+                    </div>
+                    <div class="pen">
+                        <img src="images/icons/pen.svg" alt="pen">
+                    </div>
+                </div>    
+            </div>
+        </section>
+
+
+        <!-- questions -->
+        <section class="questions container-fluid" id="questions">
+            <div class="container">
+                <h2 class="template-title">Frequently Asked Questions</h2>
+                <div class="container-questions">
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button">
+                                    How is the delivery cost calculated?
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse collapse height-auto">
+                                <div class="accordion-body">We can take payment for the goods in China on your behalf. If you don't have a foreign currency account, you can pay for the goods in rubles to our account in Russia.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button">
+                                    How is the payment for cargo delivery made?
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse">
+                                <div class="accordion-body">We can take payment for the goods in China on your behalf. If you don't have a foreign currency account, you can pay for the goods in rubles to our account in Russia.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button">
+                                    How quickly can I place an order for delivery from China to Russia?
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse">
+                                <div class="accordion-body">We can take payment for the goods in China on your behalf. If you don't have a foreign currency account, you can pay for the goods in rubles to our account in Russia.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button">
+                                    Can I pay the supplier through you?
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse">
+                                <div class="accordion-body">We can take payment for the goods in China on your behalf. If you don't have a foreign currency account, you can pay for the goods in rubles to our account in Russia.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button">
+                                    What is the uniqueness of CARGO delivery from China?
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse">
+                                <div class="accordion-body">We can take payment for the goods in China on your behalf. If you don't have a foreign currency account, you can pay for the goods in rubles to our account in Russia.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button">
+                                    What is the delivery time from China?
+                                </button>
+                            </h2>
+                            <div class="accordion-collapse">
+                                <div class="accordion-body">We can take payment for the goods in China on your behalf. If you don't have a foreign currency account, you can pay for the goods in rubles to our account in Russia.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="form-questions">
+                        <h2>Have more questions?</h2>
+                        <p>Leave a request and our manager will respond to you shortly</p>
+                        <div class="input-list">
+                            <div class="input-item">
+                                <input type="text" id="name" name="name" placeholder="Name*">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" id="phone" name="phone" placeholder="Phone*">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" id="mail" name="mail" placeholder="E-mail">
+                            </div>
+                            <div class="input-item">
+                                <input type="text" id="question" name="question" placeholder="Your question">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Send Inquiry<i class="icon icon-arrow-left"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- cooperation -->
+        <section class="cooperation container-fluid section-background" id="cooperation">
+            <div class="container">
+                <div class="container-title">
+                    <h2 class="template-title">Ready to Collaborate?</h2>
+                </div>
+                
+                <div class="container-cooperation">
+                    <ul class="first-block">
+                        <li>To start collaboration, it is necessary to arrange the cargo by providing information about its contents, value, and quantity. Also, attach photos to the application.</li>
+                        <li>If you require verification of the goods to match the quantity, please indicate it in the "Note" field when arranging the cargo on our website. This service is chargeable and costs 3 yuan per item in the order. Any additional cargo inspections are discussed individually, including their cost.</li>
+                        <li>Before sending the cargo to our warehouse in China, make sure to label each external box with your order number on our website so that we can identify your cargo correctly. If you are unable to do this yourself, please ask your supplier to do it for you.</li>
+                    </ul>
+                
+                    <div class="second-block">
+                        <img src="images/cooperation/cooperation-img-1.png" alt="cooperation">
+                    </div>
+                
+                    <div class="third-block">
+                        <img src="images/cooperation/cooperation-img-2.png" alt="cooperation">
+                    </div>
+                
+                    <ul class="fourth-block">
+                        <li>After sending the cargo to our warehouse in China, you must provide the tracking number for each item in the order for tracking the packages in China. You can enter the tracking number on the order page. The tracking number is another measure to identify your cargo in our warehouse.</li>
+                        <li>If you have arranged the cargo according to our instructions and have done everything correctly, the order status will change to "In Warehouse" upon receiving your cargo at the warehouse in China.</li>
+                        <button class="btn btn-primary">Arrange Cargo<i class="icon icon-arrow-left"></i></button>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer" id="contacts">
+            <div class="container">
+                <div class="contacts">
+                    <img class="img-logo" src="images/logo.svg" alt="logo">
+                    <div class="number">8(800)600-18-69</div>
+                    <a href="info@cargoasia.info">info@cargoasia.info</a>
+                    <div class="address">Address in China: <br> Building 5, Unit 1, 1st Floor, RT789 Warehouse, Honghua Community, Houzhai Street, Yiwu City, Jinhua City, Zhejiang Province, China. Tel: 15966660379</div>
+                    <div class="row-social-icon">
+                        <a href="#"><img src="images/icons/icon-instagram.svg" alt="media"></a>
+                        <a href="#"><img src="images/icons/icon-vkontakte.svg" alt="media"></a>
+                        <a href="#"><img src="images/icons/icon-telegram.svg" alt="media"></a>
+                    </div>
+                </div>
+                <div class="block-footer">
+                    <div class="title-footer">Freight Transportation</div>
+                    <a href="#" class="link-footer">Prices and Deadlines</a>
+                    <a href="#" class="link-footer">Services</a>
+                    <a href="#" class="link-footer">About Us</a>
+                    <a href="#" class="link-footer">Contacts</a>
+                    <a href="#" class="link-footer">Register Cargo</a>
+                </div>
+                <div class="block-footer">
+                    <div class="title-footer">Services</div>
+                    <a href="#" class="link-footer">Product Purchase</a>
+                    <a href="#" class="link-footer">Cargo Insurance</a>
+                    <a href="#" class="link-footer">Warehouse Rental</a>
+                    <a href="#" class="link-footer">Money Transfer</a>
+                </div>
+                <div class="block-footer">
+                    <div class="title-footer">Information</div>
+                    <a href="#" class="link-footer">Reviews</a>
+                    <a href="#" class="link-footer">Cargo Requirements</a>
+                    <a href="#" class="link-footer">Contract-Offer</a>
+                    <a href="#" class="link-footer">How to Sign a Contract</a>
+                    <a href="#" class="link-footer">Payment Methods</a>
+                    <a href="#" class="link-footer">Documents</a>
+                    <a href="#" class="link-footer">Articles</a>
+                </div>
+            </div>            
+        </div>
+    </footer>
+
+    <script src="js/app.min.js"></script>
+</body>
+</html>

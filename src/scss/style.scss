@@ -1,0 +1,183 @@
+@use 'sass:math';
+
+// Подключение шрифтов локально из папки "./src/fonts" =======================================================================================================================
+@import 'config/fonts';
+
+// Подключение sass функций и миксинов и рассширений стилей =======================================================================================================================
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/patternSelectors';
+
+// Подключение переменных =======================================================================================================================
+@import 'config/vars';
+
+// Обнуление =======================================================================================================================
+@import 'config/reset';
+
+// * Библиотеки
+@import '../../node_modules/animate.css/animate'; 
+
+// Подлючение кастомного скрола для всего сайта =======================================================================================================================
+@import 'config/scrollbar';
+
+// Общие параметры, шаблоны(заготовки) и вспомагательные классы =======================================================================================================================
+@import 'config/base';
+
+// БЕМ блоки используемые во всё проекте =======================================================================================================================
+@import 'config/common';
+
+// Подключение стилей отдельных блоков и секций =======================================================================================================================
+
+@import 'layout/header.scss';
+@import 'layout/first-screen.scss';
+@import 'layout/calculation.scss';
+@import 'layout/advantages.scss';
+@import 'layout/dilivery-services-aboutCompany.scss';
+@import 'layout/slider-template.scss';
+@import 'layout/questions.scss';
+@import 'layout/cooperation.scss';
+@import 'layout/footer.scss';
+
+body{
+  background: #282B38;
+  padding: 0;
+}
+main{
+  padding: 0;
+}
+.navbar {
+  --bs-navbar-toggler-icon-bg: url("../images/img-menu.png");
+}
+.container-fluid{
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 90px 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.active{
+  display: block !important;
+}
+.hidden{
+  display: none;
+}
+.section-background{
+  background: linear-gradient(0deg, #363A4D, #363A4D), #F7F7F7;
+  z-index: 1;
+  border-radius: 20px
+}
+
+/* шаблон титулки */
+
+.template-title{
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 124.5%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.template-title::before{
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 2px;
+  display: block;
+  bottom: -20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  background: #E58D35;
+}
+
+/* главный шаблон кнопки */
+
+.btn{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 146%;
+  text-align: center;
+  color: #ffff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+
+
+  min-width: 153px;
+  
+  padding: 14px 18px;
+  border-radius: 90px;
+  transition: all 500ms ease-in; 
+}
+
+/* виды кнопок */    
+
+.btn-primary{
+  background: $firstAccentColor;
+  border-color: $firstAccentColor;
+
+}    
+.btn-primary:hover, 
+.btn-primary:active:focus {
+  box-shadow: none;
+  background-color: $firstAccentColor;
+  border-color: $firstAccentColor;
+}    
+.btn-primary:active,
+.btn-primary:focus{
+  background-color: #cd751d !important;
+  box-shadow: none;
+  border-color: $firstAccentColor;
+}
+
+.btn-secondary{
+  background-color: transparent;
+  border: 1px solid;
+  border-color: $firstAccentColor; 
+}
+.btn-secondary:hover, 
+.btn-secondary:active:focus {
+  box-shadow: none;
+  background-color: $firstAccentColor;
+  border-color: $firstAccentColor;
+}    
+.btn-secondary:active,
+.btn-secondary:focus{
+  background-color: transparent !important;
+  box-shadow: none;
+  border-color: $firstAccentColor;
+}
+
+// /* иконка кнопки */
+
+.icon{
+  width: 27px;
+  height: 27px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.icon-arrow-left{
+  background-image: $bgArrowLeft;
+}
+
+.icon-step{
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='512' height='512' x='0' y='0' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512' xml:space='preserve' class=''%3E%3Cg%3E%3Cg xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='256' cy='256' fill='%23a6d4fd' r='256' data-original='%23a6d4fd' class=''%3E%3C/circle%3E%3Cpath d='m335.099 233.654-139.936-139.936-47.487 47.487 51.159 51.159-62.427 62.427 52.823 52.823-30.612 30.612 164.786 164.786c91.935-25.03 163.276-99.997 183.077-193.971l-123.385-123.385z' fill='%236cb1f8' data-original='%236cb1f8' class=''%3E%3C/path%3E%3Cpath d='m362.487 174.371c-15.743-2.953-29.101 6.5-34.766 10.509-26.909 19.043-33.522 51.999-38.508 76.842-3.434 17.112-6.585 43.321-2.155 75.724 15.089 2.661 30.178 5.321 45.267 7.982l29.874-82.921z' fill='%23555a65' data-original='%23555a65'%3E%3C/path%3E%3Cpath d='m362.487 174.371c15.804 2.609 25.123 16.061 29.075 21.766 18.773 27.098 13.716 60.328 9.904 85.378-2.626 17.255-8.628 42.96-23.874 71.895-15.089-2.661-30.178-5.321-45.267-7.982z' fill='%23333940' data-original='%23333940' class=''%3E%3C/path%3E%3Cpath d='m280.092 371.77-4.237 24.031c-4.486 25.442 12.463 49.702 37.873 54.262.048.009.094.02.142.029l18.149-32.983-5.774-37.201z' fill='%23555a65' data-original='%23555a65'%3E%3C/path%3E%3Cpath d='m368.161 412.077 4.237-24.031-46.153-8.138-12.375 70.184c25.49 4.495 49.796-12.525 54.291-38.015z' fill='%23333940' data-original='%23333940' class=''%3E%3C/path%3E%3Cpath d='m151.513 75.751c-15.804 2.609-25.123 16.061-29.075 21.766-18.773 27.098-13.716 60.328-9.904 85.379 2.626 17.255 8.628 42.96 23.874 71.895 15.089-2.661 30.178-5.321 45.267-7.982l-.289-88.138z' fill='%23555a65' data-original='%23555a65'%3E%3C/path%3E%3Cpath d='m151.513 75.751c15.743-2.953 29.101 6.5 34.766 10.509 26.909 19.043 33.522 51.999 38.508 76.842 3.434 17.112 6.585 43.321 2.155 75.724-15.089 2.661-30.178 5.321-45.267 7.982z' fill='%23333940' data-original='%23333940' class=''%3E%3C/path%3E%3Cpath d='m141.602 289.426 4.237 24.031c4.486 25.442 28.711 42.442 54.148 38.036.048-.008.095-.013.143-.022l5.774-37.201-18.149-32.983z' fill='%23555a65' data-original='%23555a65'%3E%3C/path%3E%3Cpath d='m238.145 297.181-4.237-24.031-46.153 8.138 12.375 70.184c25.49-4.495 42.51-28.801 38.015-54.291z' fill='%23333940' data-original='%23333940' class=''%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+@media (max-width: 799.98px) {
+  .slick-arrow{
+    display: none;
+  }
+}

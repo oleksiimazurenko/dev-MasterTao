@@ -1,0 +1,108 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1162px;
+    margin: 0 auto;
+    padding: 25px 12px 40px;
+    .navbar-brand{
+        padding: 0;
+    }
+    .navbar-toggler{
+        background-color: #282B38;
+        display: none;
+        img{
+            filter: invert(1);
+        }
+        img:hover{
+            filter: contrast(0.1);
+        }
+    }
+
+    a.btn{
+        min-width: 171px;
+    }
+
+    .collapsed{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px !important;
+        
+        .navbar-nav{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .navbar-collapse{
+        display: flex;
+        max-width: 870px;
+        width: 100%;
+        transition: all 500ms ease-in;
+
+        .navbar-nav{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+
+            .nav-item{
+                display: flex;
+                align-items: center;
+                max-height: 50px;
+
+                .nav-link{
+                    color:#fff;
+                }
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .box-header-button{
+            a.btn{
+                display: block;
+            }
+        }
+    }
+}
+
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+// @media (max-width: 1399.98px) {}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+// @media (max-width: 1199.98px) {}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px 12px 15px;
+        .navbar-toggler{
+            display: block;
+        }
+        .navbar-collapse{
+            flex-direction: column;
+            align-items: center;
+            margin-top: -380px;
+            .navbar-nav{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .nav-item{
+            margin: 10px 0;
+        }
+        .box-header-button{
+            margin: 10px 0;
+        }
+    }
+    
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+// @media (max-width: 767.98px) {}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+// @media (max-width: 575.98px) {}

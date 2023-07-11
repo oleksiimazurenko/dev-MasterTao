@@ -1,0 +1,207 @@
+.first-screen{
+    position: relative;
+    margin-bottom: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+    &__slide-list{
+        display: flex;
+    }
+    &__slide{
+        display: none;
+        position: relative;
+        max-width: 1920px;
+        width: 100%;
+        height: 800px;
+        padding: 163px 0 228px 340px;
+        margin: 0 auto;
+        border-radius: 20px;
+        background-position: center;
+        background-size: 2500px;
+        background-repeat: no-repeat;
+        transition: all 500ms ease-in;
+        --animate-duration: 300ms;
+        .slide-title{
+            font-weight: 700;
+            font-size: 56px;
+            line-height: 126%;
+            max-width: 463px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            transition: all 500ms ease-in;
+        }
+        .slide-subtitle{
+            font-weight: 300;
+            font-size: 20px;
+            max-width: 345px;
+            line-height: 135.5%;
+            color: #FFFFFF;
+            margin-bottom: 47px;
+            transition: all 500ms ease-in;
+        }
+        .btn{
+            max-width: 250px;
+            width: 100%;
+        }
+    }
+     /* стрелки */
+
+    .slick-arrow{
+        position: absolute;
+        img{
+            width: 55px;
+            height: 55px;
+            transition: all 500ms ease-in;
+        }
+    }
+    .slick-next{
+        top: 50%;
+        right: 10%;
+    }
+    .slick-next:hover, .slick-next:focus{
+        background-repeat: no-repeat;
+        filter: invert(20%);
+    }
+    .slick-prev{
+        top: 50%;
+        left: 10%;
+    }
+    .slick-prev:hover, .slick-prev:focus{
+        filter: invert(20%);
+    }
+    /* индикатор */
+
+    .slick-dots{
+        position: absolute;
+        font-size: 0;
+        bottom: 20px;
+        left: calc(50% - 67px);
+        ul{
+            display: flex;
+        }
+        li{
+            width: auto;
+            height: auto;
+            margin: 0 13px;
+            button {
+                width: 8px;
+                height: 8px;
+                background: transparent;
+                border-radius: 50%;
+                border: 2px solid #ffffff;
+                padding: 0;
+            }
+        }
+        li.slick-active button{
+            background-color: #fff;
+        }
+        li button::before{
+            display: none;
+        }
+    }    
+}
+
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+// @media (max-width: 1399.98px) {}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+
+    .first-screen{
+        &__slide{
+            .slide-title{
+                font-size: 46px;
+            }
+            .slide-subtitle{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    .first-screen{
+        &__slide{
+            padding: 163px 0 228px 220px;
+            .slide-title{
+                font-size: 36px;
+            }
+            .slide-subtitle{
+                font-size: 13px;
+            }
+        }
+        .slick-arrow{
+            img{
+                width: 35px;
+                height: 35px; 
+            }
+        }
+    }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) {
+    
+    .first-screen{
+        &__slide{
+            padding: 163px 0 228px 140px;
+            .slide-title{
+                font-size: 26px;
+            }
+            .slide-subtitle{
+                font-size: 10px;
+            }
+        }
+        .slick-arrow{
+            img{
+                width: 30px;
+                height: 30px; 
+            }
+        }
+    }
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+
+    .first-screen{
+        &__slide{
+            height: 545px;
+            padding: 163px 0 228px 100px;
+            .slide-title{
+                font-size: 20px;
+            }
+            .slide-subtitle{
+                font-size: 9px;
+            }
+        }
+        .slick-arrow{
+            img{
+                width: 25px;
+                height: 25px; 
+            }
+        }
+    }
+
+}
+
+// other 
+@media (max-width: 435.98px) {
+
+    .first-screen{
+        .first-screen__slide{
+            padding: 163px 15px 228px 15px;
+            .container{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .btn{
+                    margin-top: 75px;
+                }
+            }
+        }
+        
+    }
+
+}
